@@ -1,0 +1,49 @@
+{
+    "name": "gravatarphp/gravatar-bundle",
+    "type": "library",
+    "description": "A bundle to integrate Gravatar into symfony",
+    "keywords": [
+        "gravatarphp",
+        "gravatar-bundle"
+    ],
+    "homepage": "https://github.com/gravatarphp/gravatar-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George Mponos",
+            "email": "gmponos@gmail.com",
+            "homepage": "https://github.com/gravatarphp",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^8.4",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gravatar\\GravatarBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Gravatar\\GravatarBundle\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
