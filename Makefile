@@ -10,6 +10,3 @@ phpcs:
 phpunit:
 	php vendor/bin/phpunit tests/ --colors=always --stop-on-failure --testdox --no-interaction
 	@make coverage-check
-
-composer-normalize:
-	php bin/composer-normalize.phar --no-update-lock
