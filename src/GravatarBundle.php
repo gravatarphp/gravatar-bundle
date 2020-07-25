@@ -6,6 +6,6 @@ namespace Gravatar\GravatarBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class GravatarBundle extends Bundle
+final class GravatarBundle extends Bundle
 {
 }
