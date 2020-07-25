@@ -17,5 +17,6 @@ final class GravatarExtension extends Extension
             'gravatarphp.gravatar',
             new Definition(Gravatar::class, [$configs['defaults'], $configs['secure']])
         );
+        $container->setAlias(Gravatar::class, 'gravatarphp.gravatar');
     }
 }
