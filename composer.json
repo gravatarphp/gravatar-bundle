@@ -1,6 +1,6 @@
 {
     "name": "gravatarphp/gravatar-bundle",
-    "type": "library",
+    "type": "symfony-bundle",
     "description": "A bundle to integrate Gravatar into symfony",
     "keywords": [
         "gravatar",
@@ -8,7 +8,7 @@
         "gravatar-bundle",
         "bundle"
     ],
-    "homepage": "https://github.com/gravatarphp/gravatar-bundle",
+    "homepage": "https://github.com/gravatarphp",
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "~7.2",
+        "php": "^7.2",
         "gravatarphp/gravatar": "^2.0.0",
         "symfony/config": "^4.4 || ^5.0",
         "symfony/dependency-injection": "^4.4 || ^5.0",
