@@ -5,21 +5,6 @@
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-build/
-docs/
-config/
-src/
-tests/
-vendor/
-```
-
-
 ## Install
 
 Via Composer
@@ -30,9 +15,21 @@ $ composer require gravatarphp/gravatar-bundle
 
 ## Usage
 
-``` php
-$skeleton = new Gravatar\GravatarBundle();
-echo $skeleton->echoPhrase('Hello, League!');
+Activate the bundle
+
+```php
+ // config/bundles.php
+return [
+     ...
+     \Gravatar\GravatarBundle\GravatarBundle::class => ['all' => true],
+];
+```
+
+```yaml
+gravatarphp:
+    defaults:
+        ... your options
+    secure: true
 ```
 
 ## Change log
