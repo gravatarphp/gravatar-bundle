@@ -40,7 +40,7 @@ final class ConfigurationTest extends TestCase
     public function useSecureWithNonBoolean(): void
     {
         $this->expectException(InvalidTypeException::class);
-        $this->expectErrorMessage('Invalid type for path "gravatar.secure". Expected "bool", but got "string"');
+        $this->expectErrorMessage('Invalid type for path "gravatar.secure".');
         $this->process(['gravatarphp' => ['secure' => '']]);
     }
 
