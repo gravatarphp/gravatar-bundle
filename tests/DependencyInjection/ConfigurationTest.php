@@ -6,6 +6,7 @@ namespace Gravatar\GravatarBundle\Tests\DependencyInjection;
 
 use Gravatar\GravatarBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Config\Definition\Exception\InvalidTypeException;
 use Symfony\Component\Config\Definition\Processor;
 
 final class ConfigurationTest extends TestCase
@@ -17,6 +18,42 @@ final class ConfigurationTest extends TestCase
     {
         $config = $this->process([]);
         $this->assertSame([], $config);
+        $config = $this->process(['gravatarphp' => null]);
+        $this->assertSame([], $config);
+
+        $config = $this->process(['gravatarphp' => []]);
+        $this->assertSame([], $config);
+    }
+
+    /**
+     * @test
+     */
+    public function useSecureCorrectly(): void
+    {
+        $config = $this->process(['gravatarphp' => ['secure' => true]]);
+        $this->assertSame(['secure' => true], $config);
+    }
+
+    /**
+     * @test
+     */
+    public function useSecureWithNonBoolean(): void
+    {
+        $this->expectException(InvalidTypeException::class);
+        $this->expectErrorMessage('Invalid type for path "gravatar.secure". Expected "bool", but got "string"');
+        $this->process(['gravatarphp' => ['secure' => '']]);
+    }
+
+    /**
+     * @test
+     */
+    public function useDefaultsCorrectly(): void
+    {
+        $config = $this->process(['gravatarphp' => ['defaults' => []]]);
+        $this->assertSame(['defaults' => []], $config);
+
+        $config = $this->process(['gravatarphp' => ['defaults' => ['whatever']]]);
+        $this->assertSame(['defaults' => ['whatever']], $config);
     }
 
     /**
