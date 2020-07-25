@@ -3,6 +3,7 @@
     "type": "library",
     "description": "A bundle to integrate Gravatar into symfony",
     "keywords": [
+        "gravatar",
         "gravatarphp",
         "gravatar-bundle",
         "bundle"
@@ -12,9 +13,7 @@
     "authors": [
         {
             "name": "George Mponos",
-            "email": "gmponos@gmail.com",
-            "homepage": "https://github.com/gravatarphp",
-            "role": "Developer"
+            "email": "gmponos@gmail.com"
         }
     ],
     "require": {
