@@ -65,7 +65,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-downloads]: https://img.shields.io/packagist/dt/gravatarphp/gravatar-bundle.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/gravatarphp/gravatar-bundle
-[link-travis]: https://travis-ci.org/gravatarphp/gravatar-bundle
+[link-travis]: https://travis-ci.com/gravatarphp/gravatar-bundle
 [link-downloads]: https://packagist.org/packages/gravatarphp/gravatar-bundle
 [link-author]: https://github.com/gmponos
 [link-contributors]: ../../contributors
